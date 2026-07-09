@@ -1,0 +1,18 @@
+.watermark {
+  position: absolute;
+  right: 3rem;
+  bottom: 2.75rem;
+  width: 110px;
+  height: auto;
+  opacity: 0.35;
+  filter: grayscale(1);
+}
+
+@media (max-width: 640px) {
+  .watermark {
+    position: static;
+    align-self: center;
+    margin: 1.5rem 0 0;
+    width: 64px;
+  }
+}

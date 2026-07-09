@@ -1,0 +1,193 @@
+.gallery {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 3rem 3rem;
+  box-sizing: border-box;
+  background: #f8f0e4;
+  overflow: hidden;
+}
+
+.gallery__grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, minmax(60px, 1fr));
+  gap: 14px;
+  height: min(64vh, 620px);
+}
+
+.gallery__item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery__item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0);
+  opacity: 0;
+  transition: opacity 0.35s ease, background-color 0.35s ease;
+}
+
+.gallery__item:hover .gallery__overlay {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.gallery__label {
+  color: #3a2c22;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 1rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.gallery__item:hover .gallery__label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery__item--a {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+}
+
+.gallery__item--b {
+  grid-column: 1;
+  grid-row: 5 / span 2;
+}
+
+.gallery__item--c {
+  grid-column: 2;
+  grid-row: 1 / span 6;
+}
+
+.gallery__item--d {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+.gallery__item--e {
+  grid-column: 3;
+  grid-row: 3 / span 2;
+}
+
+.gallery__item--f {
+  grid-column: 3;
+  grid-row: 5 / span 2;
+}
+
+.gallery__item--g {
+  grid-column: 4;
+  grid-row: 1 / span 2;
+}
+
+.gallery__item--h {
+  grid-column: 4;
+  grid-row: 3 / span 4;
+}
+
+.gallery__item--i {
+  grid-column: 5;
+  grid-row: 1 / span 3;
+}
+
+.gallery__item--j {
+  grid-column: 5;
+  grid-row: 4 / span 3;
+}
+
+.gallery__socials {
+  position: absolute;
+  left: 3rem;
+  bottom: 2.75rem;
+}
+
+@media (max-width: 1000px) {
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+    grid-auto-rows: 220px;
+    height: auto;
+  }
+
+  .gallery__item--a,
+  .gallery__item--b,
+  .gallery__item--c,
+  .gallery__item--d,
+  .gallery__item--e,
+  .gallery__item--f,
+  .gallery__item--g,
+  .gallery__item--h,
+  .gallery__item--i,
+  .gallery__item--j {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .gallery__item--c {
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery {
+    padding: 6.5rem 1.5rem 2.5rem;
+  }
+
+  .gallery__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery__item--c {
+    grid-row: auto;
+  }
+
+  .gallery__socials {
+    position: static;
+    align-self: center;
+    margin-top: 2.5rem;
+  }
+}
+
+/* Touch devices have no hover state, so the caption needs to be reachable
+   without it — show it as a permanent bottom scrim instead. */
+@media (hover: none) {
+  .gallery__overlay {
+    opacity: 1;
+    align-items: flex-end;
+    background: linear-gradient(to top, rgba(36, 26, 18, 0.55), rgba(36, 26, 18, 0) 55%);
+  }
+
+  .gallery__label {
+    opacity: 1;
+    transform: none;
+    color: #f6f1e8;
+    padding: 0.9rem 1rem;
+  }
+}
