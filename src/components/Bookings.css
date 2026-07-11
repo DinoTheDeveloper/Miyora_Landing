@@ -72,6 +72,7 @@
 .bookings__field input,
 .bookings__field select {
   width: 100%;
+  max-width: 100%;
   min-width: 0;
   height: 48px;
   padding: 0 1.25rem;
@@ -82,7 +83,13 @@
   font-family: inherit;
   font-size: 0.9rem;
   outline: none;
+  box-sizing: border-box;
   transition: box-shadow 0.2s ease;
+}
+
+.bookings__field input[type='date'] {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .bookings__field textarea {
