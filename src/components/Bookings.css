@@ -56,6 +56,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  min-width: 0;
 }
 
 .bookings__field--full {
@@ -71,6 +72,7 @@
 .bookings__field input,
 .bookings__field select {
   width: 100%;
+  min-width: 0;
   height: 48px;
   padding: 0 1.25rem;
   border-radius: 999px;
