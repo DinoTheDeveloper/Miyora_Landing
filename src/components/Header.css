@@ -6,7 +6,7 @@
   align-items: center;
   padding: 2.5rem 3rem 3rem;
   box-sizing: border-box;
-  background: radial-gradient(circle at 50% 20%, #fbf8f2 0%, #f6f1e8 60%, #f2ebdf 100%);
+  background-color: #FCFAF4;
 }
 
 .hero__content {

@@ -1,24 +1,8 @@
+import { Link } from 'react-router-dom'
 import Socials from './Socials'
 import Watermark from './Watermark'
+import { SERVICES } from '../data/services'
 import './Services.css'
-
-const SERVICES = [
-  {
-    title: 'Event Planning',
-    description:
-      'Full-service planning for occasions that should feel effortless to attend and unforgettable to remember, from concept through to the final detail.',
-  },
-  {
-    title: 'Event Styling & Tablescaping',
-    description:
-      'Transforming your vision into a beautifully curated celebration through thoughtful styling, refined details and a cohesive design that leaves a lasting impression.',
-  },
-  {
-    title: 'Intimate Dinners & Celebrations',
-    description:
-      'Dinner parties, birthdays, bridal showers, and the occasions that deserve more than a last-minute plan. We design private experiences for the host who wants the result without the process.',
-  },
-]
 
 function Services() {
   return (
@@ -28,9 +12,11 @@ function Services() {
 
         <div className="services__grid">
           {SERVICES.map((service) => (
-            <div key={service.title} className="services__item">
-              <h3 className="services__title">{service.title}</h3>
-              <p className="services__text">{service.description}</p>
+            <div key={service.slug} className="services__item">
+              <h3 className="services__title">
+                <Link to={`/services/${service.slug}`}>{service.title}</Link>
+              </h3>
+              <p className="services__text">{service.shortDescription}</p>
               <a href="#bookings" className="services__cta">
                 Enquire
               </a>

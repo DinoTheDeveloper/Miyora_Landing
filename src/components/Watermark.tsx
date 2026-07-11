@@ -1,4 +1,4 @@
-import logo from '../assets/icons/Logo_cropped.png'
+import logo from '../assets/icons/miyora-logo-cropped.webp'
 import './Watermark.css'
 
 type WatermarkProps = {
@@ -10,6 +10,8 @@ function Watermark({ className }: WatermarkProps) {
     <img
       src={logo}
       alt=""
+      width={960}
+      height={321}
       className={`watermark${className ? ` ${className}` : ''}`}
       aria-hidden="true"
     />

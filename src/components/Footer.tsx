@@ -6,7 +6,7 @@ const YEAR = new Date().getFullYear()
 function Footer() {
   return (
     <footer id="contact" data-nav-section className="footer">
-      <span className="footer__label">Contact Us</span>
+      <h2 className="footer__label">Contact Us</h2>
 
       <div className="footer__details">
         <div className="footer__detail">

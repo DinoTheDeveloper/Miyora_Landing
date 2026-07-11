@@ -35,7 +35,7 @@ function Nav({ label }: NavProps) {
           <ul>
             {NAV_LINKS.map((link) => (
               <li key={link}>
-                <a href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}>{link}</a>
+                <a href={`/#${link.toLowerCase().replace(/\s+/g, '-')}`}>{link}</a>
               </li>
             ))}
           </ul>
@@ -62,7 +62,7 @@ function Nav({ label }: NavProps) {
           {NAV_LINKS.map((link) => (
             <li key={link}>
               <a
-                href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
+                href={`/#${link.toLowerCase().replace(/\s+/g, '-')}`}
                 onClick={() => setMenuOpen(false)}
               >
                 {link}

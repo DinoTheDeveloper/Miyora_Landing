@@ -1,5 +1,5 @@
-import quoteMark from '../assets/images/quote_image.png'
-import tableSketch from '../assets/images/table_image.png'
+import quoteMark from '../assets/images/quote-mark-icon.webp'
+import tableSketch from '../assets/images/styled-event-table-sketch.webp'
 import Socials from './Socials'
 import Watermark from './Watermark'
 import './Mission.css'
@@ -10,7 +10,14 @@ function Mission() {
       <div className="mission__body">
         <div className="mission__copy">
           <h2 className="mission__heading">
-            <img src={quoteMark} alt="" className="mission__quote" aria-hidden="true" />
+            <img
+              src={quoteMark}
+              alt=""
+              width={117}
+              height={93}
+              className="mission__quote"
+              aria-hidden="true"
+            />
             People remember how an event made them feel&hellip;
           </h2>
           <p className="mission__text">
@@ -28,7 +35,12 @@ function Mission() {
         </div>
 
         <div className="mission__image">
-          <img src={tableSketch} alt="Sketch of a styled event table setting" />
+          <img
+            src={tableSketch}
+            alt="Sketch of a styled event table setting"
+            width={882}
+            height={749}
+          />
         </div>
       </div>
 

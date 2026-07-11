@@ -144,7 +144,7 @@ function Bookings() {
 
   return (
     <section id="bookings" data-nav-section className="bookings">
-      <h2 className="bookings__heading">Request a booking.</h2>
+      <h2 className="bookings__heading">Request a booking</h2>
       <p className="bookings__subtext">
         Tell us a little about what you are planning, and we will be in touch to arrange a
         time to talk it through.
